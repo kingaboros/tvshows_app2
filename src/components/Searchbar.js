@@ -13,8 +13,8 @@ const Searchbar = () => {
 
   return (
       <div className="searchbar__form"> 
-        <input 
-      type="search" 
+        <input className="searchbar__input"
+      type="text" 
       placeholder="Search for a TV show here..." 
       value={searchTerm} 
       onChange={(event) => setSearchTerm(event.target.value)}

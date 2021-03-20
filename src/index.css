@@ -1,6 +1,7 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   }
 
 body {
@@ -8,7 +9,7 @@ body {
 }
 
 
-/*NavBar styles */
+/*NavBar Styling */
 
 a {
   text-decoration: none;
@@ -20,7 +21,6 @@ a {
 a:hover {
   text-decoration: none;
   color: #b1e7deb4;
-
 }
 
 .navBar {
@@ -48,7 +48,7 @@ a:hover {
 }
 
 .list-item {
-  padding: 10px;
+ padding: 10px;
  margin-left: 20px;
  border: 1px solid #6f7d99;
 
@@ -59,3 +59,62 @@ a:hover {
   border-bottom: 1px solid #b1e7deb4;
  
  }
+
+ /* Searchbar Styling */
+
+ .searchbar__form { 
+  position: relative;
+   text-align: center;
+   background: transparent;
+   width: 500px;
+   margin: 0 auto;
+   max-height: 0px;
+   font-size: 150px;
+          
+ }
+
+ .searchbar__input {
+   width: 500px;
+   padding: 20px 30px;
+   font-size: 30px;
+   color: #6f7d99;
+   border-style: none;
+   border-bottom: 1px solid #6f7d99;
+   background: transparent;
+   outline-width: 0;
+   box-shadow: 0 0 1px 1px #b1e7deb4;
+   
+ }
+
+ ::placeholder {
+   text-align: center;
+  color: #6f7d99;
+  font-size: 30px;
+  
+}
+
+.search-btn {
+  cursor: pointer;
+  display: block;
+  padding: 20px 30px;
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+  width: 500px;
+  font-size: 20px;
+ background: #6f7d99;
+ border-style: none;
+ border-radius: 3px;
+ border-bottom: 1px solid #6f7d99;
+ color: rgb(233, 233, 233);
+ box-shadow: 1px 2px rgba(162, 202, 195, 0.282);
+
+}
+
+.search-btn:hover {
+  background: #b1e7deb4;
+  color: #6f7d99;
+  transition: ease-in-out;
+  border-bottom: 1px solid #6f7d99;
+  box-shadow: 0 0 1px 1px #b1e7deb4
+}

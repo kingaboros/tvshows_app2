@@ -12,21 +12,19 @@ const Homepage = () => {
     <div className="homepage">
      <Searchbar />
      <Particles
-        style={{ position: "absolute" }}
-        height="95%"
-        width="95%"
+        style={{ position: "cover" }}
         params={{
           particles: {
             color: {
-              value: "#000000"
+              value: "#39746a"
             },
             line_linked: {
               color: {
-                value: "#000000"
+                value: "#6f7d99"
               }
             },
    	        number: {
-	            "value": 50
+	            "value": 100
 	        },
 	        size: {
 	            "value": 3
@@ -41,6 +39,7 @@ const Homepage = () => {
 	        }
 	    }
 	}} />
+  
 
   
   </div>
