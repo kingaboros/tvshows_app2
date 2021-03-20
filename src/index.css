@@ -120,3 +120,24 @@ a:hover {
 }
 
 /* Results styling */
+
+.searchResultsPage {
+  
+  display:block;
+  padding: 30px;
+}
+
+.left-column{
+  display: flex;
+  margin-top: 20px;
+  padding: 20px;
+ 
+
+}
+
+.right-column li{
+  display: flex;
+  list-style: none;
+  padding: 20px;
+
+}
