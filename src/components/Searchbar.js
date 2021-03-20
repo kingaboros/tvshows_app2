@@ -7,24 +7,21 @@ const Searchbar = () => {
   const onSearchHandler = (event) => {
   event.preventDefault();
 
-  console.log("Searching for " + searchTerm);
+ 
 
   }
 
   return (
-    <div className="searchbar">
-     <form className="searchbar_form">
-      <input 
-      type="text" 
+      <div className="searchbar__form"> 
+        <input 
+      type="search" 
       placeholder="Search for a TV show here..." 
       value={searchTerm} 
       onChange={(event) => setSearchTerm(event.target.value)}
         />
-        <button className="search-btn" onClick={onSearchHandler}>Search
-
-        </button>
-     </form>
-    </div>
+        <button className="search-btn" onClick={onSearchHandler}>Search </button>
+     
+      </div>
   )
 }
 

@@ -5,6 +5,7 @@ import Particles from 'react-particles-js';
 
 //Components
 import Navbar from './components/Navbar';
+import Searchbar from './components/Searchbar';
 
 //Pages
 import Homepage from './pages/Homepage';
@@ -16,36 +17,8 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <Particles
-        style={{ position: "absolute" }}
-        height="95%"
-        width="95%"
-        params={{
-          particles: {
-            color: {
-              value: "#000000"
-            },
-            line_linked: {
-              color: {
-                value: "#000000"
-              }
-            },
-   	        number: {
-	            "value": 50
-	        },
-	        size: {
-	            "value": 3
-	        }
-	    },
-	    interactivity: {
-	        "events": {
-	            "onhover": {
-	                "enable": true,
-	                "mode": "repulse"
-	            }
-	        }
-	    }
-	}} />
+      
+      
    
     <div className="container">
      <Switch> 
