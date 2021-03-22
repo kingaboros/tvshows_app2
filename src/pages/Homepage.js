@@ -1,46 +1,53 @@
-import Particles from 'react-particles-js';
+import { useState } from 'react';
+import axios from 'axios'; 
 
 
 //Components
 import Searchbar from '../components/Searchbar';
+import Background from'../components/Background';
+
+
 
 
 
 
 const Homepage = () => {
-  return (
-    <div className="homepage">
-     <Searchbar />
-     <Particles
-        style={{ position: "cover" }}
-        params={{
-          particles: {
-            color: {
-              value: "#39746a"
-            },
-            line_linked: {
-              color: {
-                value: "#6f7d99"
-              }
-            },
-   	        number: {
-	            "value": 100
-	        },
-	        size: {
-	            "value": 3
-	        }
-	    },
-	    interactivity: {
-	        "events": {
-	            "onhover": {
-	                "enable": true,
-	                "mode": "repulse"
-	            }
-	        }
-	    }
-	}} />
+
+  const [state, setState] = useState({
+    s: "",
+    results: [],
+    selected: {},
+  });
+  
+    const apiUrl ="http://api.tvmaze.com/search/shows?";
+  
+    const search = (event) => {
+      if (event.key === "Enter") {
+        axios(apiUrl + "q=" + state.s).then(({ data }) => {
+          let results = data.Search;
+
+          setState(prevState => {
+            return { ...prevState, results: results}
+          })
+        })
+      }
+    }
+  
+    const handleInput =(event) => {
+    let s = event.target.value;
+  
+    setState(prevState => {
+      return { ...prevState, s:s} 
+    });
+  
+    console.log(state.s);
+  }
   
 
+  return (
+    <div className="homepage">
+     <Searchbar handleInput={handleInput} search={search} />
+     <Background />
   
   </div>
 
