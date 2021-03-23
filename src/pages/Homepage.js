@@ -1,5 +1,3 @@
-import { useEffect, useState } from 'react';
-
 
 
 //Components
@@ -11,27 +9,6 @@ import Background from'../components/Background';
 
 const Homepage = () => {
   
-
-
-  const [ shows, setShows ] = useState([]);
-
-  useEffect(( ) => {
-    const showsResponse = fetch(apiUrl)
-    .then(res => res.json())
-    .then (data =>{
-      console.log(data);
-      setShows(showsR);
-
-    });
-    const showsR = showsResponse.json();
-
-  })
-  
-    const apiUrl ="http://api.tvmaze.com/search/shows?q=girls";
-  
- 
-  
-
   return (
     <div className="homepage">
      <Searchbar />

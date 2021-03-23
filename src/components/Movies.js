@@ -1,20 +1,18 @@
 
 
-const Movies = () => {
+const Movies = (name, image, premiered, summary, network ) => {
   return (
-    <div className="movies">
-      <h1> Results for "search-term"  </h1>
-         
-            <img src="#" alt="tv show image"/>
-          
-          
-            <ul>
-              <li>Name</li>
-              <li>firstAired</li>
-              <li>TV channel</li>
-              <li>Overview</li>
+    <div className="moviesInfo">
+              
+      <img src={image} alt={name}/>
+      <h2>{name}</h2>
+      <span>{premiered}</span>
+      <span>{network.name}</span>
+      <h3>Overview</h3>
+      <p>{summary}</p>
 
-          </ul>
+          
+            
       
     </div>
   )

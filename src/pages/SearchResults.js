@@ -1,4 +1,4 @@
-
+import { useState, useEffect } from 'react';
 
 
 //Components
@@ -7,12 +7,13 @@ import Movies from '../components/Movies';
 
 
 const SearchResults = () => {
-  const movies = ["1", "2", "3"];
+  const [ movies, setMovies] = useState([]);
 
   return (
-      <div className="searchResultsPage">
-        {movies.map(movies => (
-          <Movies />
+    <div className="searchResultsPage">
+        <h1> Results  </h1>
+        {movies.map(movie => (
+          <Movies key={movie.id} {...movie}/>
 
         ))}
         
