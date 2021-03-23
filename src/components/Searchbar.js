@@ -3,6 +3,8 @@ import { useState } from 'react';
 import '../index.css';
 
 
+
+
 const Searchbar = ({ handleInput, search }) => {
    
   return (

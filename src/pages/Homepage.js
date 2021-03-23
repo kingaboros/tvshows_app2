@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import axios from 'axios'; 
+import { useEffect, useState } from 'react';
+
 
 
 //Components
@@ -9,44 +9,33 @@ import Background from'../components/Background';
 
 
 
-
-
 const Homepage = () => {
+  
 
-  const [state, setState] = useState({
-    s: "",
-    results: [],
-    selected: {},
-  });
-  
-    const apiUrl ="http://api.tvmaze.com/search/shows?";
-  
-    const search = (event) => {
-      if (event.key === "Enter") {
-        axios(apiUrl + "q=" + state.s).then(({ data }) => {
-          let results = data.Search;
 
-          setState(prevState => {
-            return { ...prevState, results: results}
-          })
-        })
-      }
-    }
-  
-    const handleInput =(event) => {
-    let s = event.target.value;
-  
-    setState(prevState => {
-      return { ...prevState, s:s} 
+  const [ shows, setShows ] = useState([]);
+
+  useEffect(( ) => {
+    const showsResponse = fetch(apiUrl)
+    .then(res => res.json())
+    .then (data =>{
+      console.log(data);
+      setShows(showsR);
+
     });
+    const showsR = showsResponse.json();
+
+  })
   
-    console.log(state.s);
-  }
+    const apiUrl ="http://api.tvmaze.com/search/shows?q=girls";
+  
+ 
   
 
   return (
     <div className="homepage">
-     <Searchbar handleInput={handleInput} search={search} />
+     <Searchbar />
+    
      <Background />
   
   </div>
