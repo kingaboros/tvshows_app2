@@ -7,7 +7,7 @@ const Movies = (name, image, premiered, summary, network ) => {
       <img src={image} alt={name}/>
       <h2>{name}</h2>
       <span>{premiered}</span>
-      <span>{network.name}</span>
+      <span>{network}</span>
       <h3>Overview</h3>
       <p>{summary}</p>
 

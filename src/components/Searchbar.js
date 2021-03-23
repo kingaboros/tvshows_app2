@@ -6,23 +6,26 @@ import '../index.css';
 import Movies from '../components/Movies';
 
 
-const Searchbar = ({ handleInput, search }) => {
+const Searchbar = ({}) => {
   
-  const apiUrl ="http://api.tvmaze.com/search/shows?q=";
   const [ movies, setMovies] = useState([]);
   const [ searchTerm, setSearchTerm] = useState('');
   
-
-
+  
+  
   
   const handleOnSubmit = (event) => {
+    const apiUrl ="http://api.tvmaze.com/search/shows?q=";
     event.preventDefault();
+
+   
 
     if (searchTerm) {
       fetch(apiUrl+searchTerm)
     .then(res => res.json())
     .then (data =>{
       
+     
       setMovies(data);
     });
       setSearchTerm('');
@@ -50,7 +53,7 @@ const Searchbar = ({ handleInput, search }) => {
         </form>
         <div>
         {movies.map(movie => (
-          <Movies key={movie.id} {...movie}/>
+          <Movies {...movie}/>
 
         ))}
         </div>
