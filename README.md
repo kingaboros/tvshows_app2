@@ -1,3 +1,17 @@
+About ConfigCatSample.js
+
+I chose to implement Feature Flags in ReactJS, because this is the language I am familiar with at the moment.
+
+When it comes to accessing the API key, I wanted to hide it in the .env file so it isn't accessible or visible in the console.
+
+I used "configCatClient.getAllKeys" because I wanted to access all the available feature flags created in the dashboard. It was used together with useState so I can easily map the array in the JSX part.
+
+Because I wanted the user to select from all the available feature flags, I mapped them out using the option element.
+
+In the end, I used again states to show which features are turned on or off. To make things look good, I used react-bootstrap as well.
+
+........................................................
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -44,7 +44,6 @@ const ConfigCatSample = () => {
           <option>----------</option>
           {featureFlags.map((flag) => (
             <option key={flag} value={flag}>
-              98m
               {flag}
             </option>
           ))}
