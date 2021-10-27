@@ -20,18 +20,12 @@ const ConfigCatSample = () => {
     });
   }, [selectedFlag]);
 
-  console.log(featureFlags);
-
   let logger = configcat.createConsoleLogger(3);
 
   const { REACT_APP_CONFIG_CAT_KEY } = process.env;
 
   let configCatClient = configcat.createClient(REACT_APP_CONFIG_CAT_KEY, {
     logger,
-  });
-
-  const features = configCatClient.getAllKeys((value) => {
-    return value;
   });
 
   return (
